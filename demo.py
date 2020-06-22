@@ -7,7 +7,7 @@ from contextlib import contextmanager
 from wide_resnet import WideResNet
 from keras.utils.data_utils import get_file
 
-pretrained_model = "https://github.com/yu4u/age-gender-estimation/releases/download/v0.5/weights.28-3.73.hdf5"
+pretrained_model = "https://github.com/tae898/age-gender-estimation/releases/download/v0.1/weights.28-3.73.hdf5"
 modhash = 'fbe63257a054c1c5466cfd7bf14646d6'
 
 
