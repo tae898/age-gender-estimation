@@ -32,11 +32,11 @@ detector = dlib.get_frontal_face_detector()
 img_size = 64
 model = WideResNet(img_size, depth=depth, k=k)()
 model.load_weights(weight_file)
-
-# image_generator = yield_images_from_dir(image_dir) if image_dir else yield_images()
+print(f"model loaded!")
 
 # for img in image_generator:
 img_BGR = cv2.imread('photo.jpg')
+print(f"imaged 'photo.jpg' loaded!")
 img_RGB = cv2.cvtColor(img_BGR, cv2.COLOR_BGR2RGB)
 img_h, img_w, _ = np.shape(img_RGB)
 
@@ -68,3 +68,4 @@ for i, d in enumerate(detected):
     draw_label(img_BGR, (d.left(), d.top()), label)
 
 cv2.imwrite('photo_annotated.jpg', img_BGR)
+print(f"An annotated image saved as 'photo_annotated.jpg'")
